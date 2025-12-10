@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webdeploy
+  labels:
+    course: OPS300
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      course: OPS300
+  template:
+    metadata:
+      labels:
+        course: OPS300
+    spec:
+      containers:
+        - name: webservice
+          image: registry.assign.gtvan-den-berg.300.ops:5000/httpd
+          ports:
+            - containerPort: 80
