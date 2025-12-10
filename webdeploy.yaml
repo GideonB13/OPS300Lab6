@@ -15,7 +15,7 @@ spec:
         course: OPS300
     spec:
       containers:
-        - name: webservice
+        - name: webdeploy
           image: registry.assign.gtvan-den-berg.300.ops:5000/httpd
           ports:
             - containerPort: 80
